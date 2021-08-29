@@ -22,7 +22,7 @@ class Order extends Model
         return $this->belongsToMany(Product::class, 'oc_product_to_category', 'order_id', 'product_id');
     }
 
-    public function total()
+    public function orderTotal()
     {
         return $this->hasMany(OrderTotal::class, 'order_id', 'order_id');
     }
